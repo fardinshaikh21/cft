@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CFT Consulting | Talent Services &amp; Sales Solutions</title>
+
+<!-- Bootstrap 4 CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0}
+.cft-services{
+  --brand:#49bc8b;
+  --brand-hover:#5ccb9c;
+  --brand-ink:#0b2a1f;
+  --deep:#0f2b3d;
+  --deeper:#0a1f2c;
+  --tint:#e8f6ef;
+  --tint-ink:#1b6b4a;
+  --ink:#10261d;
+  --muted:#53695f;
+  --paper:#f3faf7;
+  --surface:#ffffff;
+  --line:#d3e6dc;
+  --on-dark:#ffffff;
+  --on-dark-muted:#b9dccd;
+  --dark-line:rgba(255,255,255,.16);
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Figtree","Segoe UI",Arial,sans-serif;
+}
+html{scroll-behavior:smooth}
+.cft-services{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.cft-services h1,.cft-services h2,.cft-services h3,.cft-services h4{font-family:var(--display);font-weight:600}
+.cft-services a{color:inherit}
+.cft-services a:hover{color:inherit}
+.cft-services :focus-visible{outline:3px solid var(--tint-ink);outline-offset:3px;border-radius:6px}
+.cft-services .dark :focus-visible,.cft-services .hero :focus-visible,.cft-services .contact :focus-visible{outline-color:var(--brand)}
+.cft-services .btn-brand{background:var(--brand);color:#fff;border:0;font-weight:600;font-size:15px;padding:12px 22px;border-radius:12px}
+.cft-services .btn-brand:hover,.cft-services .btn-brand:focus{background:none;color:var(--brand);border:1px solid #fff;}
+.cft-services .btn-deep{background:var(--brand);color:#fff;border:0;font-weight:600;font-size:15px;padding:12px 22px;border-radius:12px}
+.cft-services .btn-deep:hover,.cft-services .btn-deep:focus{color:var(--brand) !important;border:1px solid var(--brand) !important;background:none;}
+.cft-services .btn-outline-light-x{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45);font-weight:600;font-size:15px;padding:12px 22px;border-radius:12px}
+.cft-services .btn-outline-light-x:hover{border-color:#fff;color:#fff}
+.cft-services .hero{background:var(--deep);color:var(--on-dark);position:relative;overflow:hidden}
+.cft-services .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:72px 72px;-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 100%);mask-image:linear-gradient(180deg,#000 30%,transparent 100%)}
+.cft-services .hero .container{position:relative}
+.cft-services .hero-main{padding:96px 0 72px}
+.cft-services .hero h1{font-size:clamp(42px,6.6vw,88px);line-height:1.02;letter-spacing:-.025em;margin:0 0 28px}
+.cft-services .hero h1 span{display:block;color:var(--brand)}
+.cft-services .hero h1 .second{color:#fff;}
+.cft-services .hero .lead{font-size:19px;color:var(--on-dark-muted);max-width:54ch;margin:0 0 32px}
+.cft-services .path{display:block;text-decoration:none;padding:22px 24px;border-radius:20px;border:1px solid var(--dark-line);background:rgba(255,255,255,.05);transition:background .2s,border-color .2s;margin-bottom:14px;color:#fff}
+.cft-services .path:hover{background:rgba(255,255,255,.1);border-color:var(--brand);color:#fff;text-decoration:none}
+.cft-services .path b{font-size:22px;font-weight:600;display:block;line-height:1.2;margin-bottom:4px}
+.cft-services .path span{font-size:15px;color:var(--on-dark-muted);display:block}
+.cft-services .path em{font-style:normal;font-size:13px;font-weight:600;color:var(--brand);display:block;margin-top:10px}
+.cft-services .hero-stats{border-top:1px solid var(--dark-line)}
+.cft-services .hs{padding:26px 0;display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+.cft-services .hs strong{font-family:var(--display);font-size:clamp(32px,4vw,48px);font-weight:600;line-height:1}
+.cft-services .hs span{font-size:14.5px;color:var(--on-dark-muted);max-width:20ch;line-height:1.35}
+@media(min-width:768px){
+.cft-services .hs-col+.hs-col .hs{padding-left:28px;border-left:1px solid var(--dark-line)}
+}
+@media(max-width:767.98px){
+.cft-services .hs-col+.hs-col .hs{border-top:1px solid var(--dark-line)}
+}
+@media(max-width:991.98px){
+.cft-services .hero-main{padding:64px 0 48px}
+}
+.cft-services .practice{padding:96px 0}
+.cft-services .practice.light{background:var(--paper)}
+.cft-services .practice.dark{background:var(--deep);color:#eafaf2}
+@media(max-width:991.98px){
+.cft-services .practice{padding:64px 0}
+}
+.cft-services .p-intro{position:sticky;top:24px;align-self:flex-start}
+@media(max-width:991.98px){
+.cft-services .p-intro{position:static;margin-bottom:40px}
+}
+.cft-services .p-chip{display:inline-block;font-size:13px;font-weight:600;padding:4px 12px;border-radius:999px;margin-bottom:20px;background:var(--tint);color:var(--brand)}
+.cft-services .dark .p-chip{background:var(--brand);color:#fff;}
+.cft-services .p-intro h2{letter-spacing:-.025em;font-size:clamp(34px,4.2vw,52px);line-height:1.05;margin:0 0 16px;color:var(--brand);}
+.cft-services .p-intro p{margin:0 0 28px;color:var(--muted);max-width:34ch}
+.cft-services .dark .p-intro p{color:var(--on-dark-muted)}
+.cft-services .svc-list{border-top:1px solid var(--line)}
+.cft-services .dark .svc-list{border-top-color:var(--dark-line)}
+.cft-services .svc{border-bottom:1px solid var(--line)}
+.cft-services .dark .svc{border-bottom-color:var(--dark-line)}
+.cft-services .svc-btn{display:flex;align-items:center;width:100%;text-align:left;background:none;border:0;padding:26px 0;color:inherit;cursor:pointer}
+.cft-services .svc-btn:focus{outline:none;}
+.cft-services .svc-btn:focus-visible{outline:3px solid var(--tint-ink);outline-offset:3px}
+.cft-services .dark .svc-btn:focus-visible{outline-color:var(--brand)}
+.cft-services .s-t{flex:1 1 auto;min-width:0;padding-right:20px}
+.cft-services .s-t b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(21px,2.2vw,27px);line-height:1.15;letter-spacing:-.015em;color:var(--brand);}
+.cft-services .s-t small{display:block;color:var(--muted);font-size:15.5px;margin-top:6px;max-width:58ch;line-height:1.5}
+.cft-services .s-t .small2{color:var(--on-dark-muted) !important;}
+.cft-services .dark .s-t small{color:var(--brand)}
+.cft-services .s-n{font-size:13px;font-weight:600;padding:4px 12px;border-radius:999px;background:var(--tint);color:var(--brand);white-space:nowrap;margin-right:20px}
+.cft-services .dark .s-n{background:var(--brand);color:#fff}
+@media(max-width:639.98px){
+.cft-services .s-n{display:none}
+}
+.cft-services .pm{color:var(--brand);flex:0 0 32px;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--line);position:relative;transition:border-color .2s,background .2s}
+.cft-services .dark .pm{border-color:var(--dark-line)}
+.cft-services .pm::before,.cft-services .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.75px;background:currentColor;transform:translate(-50%,-50%);transition:transform .25s}
+.cft-services .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.cft-services .svc-btn[aria-expanded="true"] .pm::after{color:#fff;transform:translate(-50%,-50%) rotate(0deg)}
+.cft-services .svc-btn:hover .pm{border-color:var(--brand)}
+.cft-services .svc-btn[aria-expanded="true"] .pm{background:var(--brand);color:#fff;}
+.cft-services .dark .svc-btn[aria-expanded="true"] .pm{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.cft-services .panel-body{padding:0 0 32px}
+.cft-services .sublist{list-style:none;margin:0 0 24px;padding:0}
+.cft-services .sublist li{padding:14px 0;border-top:1px solid var(--line)}
+.cft-services .dark .sublist li{border-top-color:var(--dark-line)}
+.cft-services .sublist b{color:var(--brand);display:block;font-weight:600;font-size:16.5px}
+.cft-services .sublist b a{color:var(--brand);text-decoration:none}
+.cft-services .sublist b a:hover{color:var(--brand);text-decoration:underline;text-decoration-color:var(--brand);text-underline-offset:4px;text-decoration-thickness:2px}
+.cft-services .sublist span{display:block;font-size:15px;color:var(--muted);margin-top:2px;line-height:1.5}
+.cft-services .dark .sublist span{color:var(--on-dark-muted)}
+.cft-services .foot{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.cft-services .foot .btn{padding:11px 20px}
+.cft-services .foot .alt{font-weight:600;font-size:15px;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--line)}
+.cft-services .dark .foot .alt{text-decoration-color:var(--dark-line)}
+.cft-services .foot .alt:hover{text-decoration-color:var(--tint-ink)}
+.cft-services .process{padding:96px 0;background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cft-services .sec-head h2{color:var(--brand);font-size:clamp(32px,4.4vw,52px);line-height:1.06;letter-spacing:-.025em;margin:0 0 10px;max-width:18ch}
+.cft-services .sec-head p{margin:0;color:var(--muted);max-width:50ch}
+.cft-services .steps{list-style:none;margin:0;padding:0}
+.cft-services .steps li{border-top:1px solid var(--line);padding-top:24px;position:relative;margin-top:40px}
+.cft-services .steps li::before{content:"";position:absolute;left:0;top:-1px;width:48px;height:3px;background:var(--brand)}
+.cft-services .n{width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;margin-bottom:16px}
+.cft-services .steps h3{font-size:22px;line-height:1.2;margin:0 0 8px;color:var(--brand);}
+.cft-services .steps p{margin:0;color:var(--muted);font-size:16px}
+@media(max-width:575.98px){
+.cft-services .process{padding:64px 0}
+}
+.cft-services .why{padding:96px 0}
+.cft-services .why h2{font-size:clamp(32px,4.4vw,52px);line-height:1.06;letter-spacing:-.025em;margin:0 0 16px;color:var(--brand)}
+.cft-services .why .intro{color:var(--muted);max-width:40ch;margin:0}
+.cft-services .reason{padding:28px 28px 28px 0;border-top:1px solid var(--line);height:100%}
+.cft-services .reason h3{color:var(--brand);}
+@media(min-width:576px){
+.cft-services .reason-col:nth-child(even) .reason{padding-left:28px;border-left:1px solid var(--line)}
+}
+.cft-services .reason h3{font-size:22px;margin:0 0 8px;line-height:1.2}
+.cft-services .reason p{margin:0;color:var(--muted);font-size:16px}
+@media(max-width:991.98px){
+.cft-services .why{padding:64px 0}
+.cft-services .why .intro-col{margin-bottom:36px}
+}
+
+/* CONTACT (new: replaces the section the WordPress theme provided) */
+.cft-services .contact{background:var(--deep);color:var(--on-dark);padding:96px 0}
+.cft-services .contact h2{color:var(--brand);font-size:clamp(32px,4.4vw,52px);line-height:1.06;letter-spacing:-.025em;margin:0 0 16px}
+.cft-services .contact p.intro{color:var(--on-dark-muted);max-width:40ch;margin:0 0 12px}
+.cft-services .contact a.mail{color:var(--brand);font-weight:600}
+.cft-services .contact label{display:block;font-size:14px;font-weight:600;color:var(--on-dark-muted);margin-bottom:6px}
+.cft-services .contact .form-control{background:rgba(255,255,255,.07);border:1px solid var(--dark-line);color:#fff;border-radius:12px;padding:12px 14px;height:auto;font-size:16px}
+.cft-services .contact .form-control:focus{border-color:var(--brand);box-shadow:none;background:rgba(255,255,255,.1);color:#fff}
+.cft-services .contact select.form-control option{color:#10261d}
+@media(max-width:991.98px){
+.cft-services .contact{padding:64px 0}
+.cft-services .contact .intro-col{margin-bottom:32px}
+}
+</style>
+</head>
+<body>
+
+<div class="cft-services">
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="row hero-main align-items-end">
+      <div class="col-lg-7 mb-5 mb-lg-0">
+        <h1><span>Build the team.</span><span class="second">Fill the pipeline.</span></h1>
+        <p class="lead">CFT Consulting is a global partner for recruitment, staffing and global capability centers, now with sales solutions covering lead generation, data, marketing and sales enablement to keep your new team busy from day one.</p>
+        <div>
+          <a class="btn btn-brand mr-2 mb-2" href="#contact">Start a conversation</a>
+          <a class="btn btn-outline-light-x mb-2" href="#talent">Explore services</a>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <a class="path" href="#talent"><b>Talent services</b><span>Recruitment, staffing and global capability centers.</span><em>3 service areas</em></a>
+        <a class="path" href="#growth"><b>Sales solutions</b><span>Lead generation, data, marketing and sales enablement.</span><em>26 services in 4 areas</em></a>
+      </div>
+    </div>
+    <div class="row hero-stats">
+      <div class="col-md-4 hs-col"><div class="hs"><strong>500+</strong><span>successful placements delivered</span></div></div>
+      <div class="col-md-4 hs-col"><div class="hs"><strong>10+</strong><span>industries and niche functions covered</span></div></div>
+      <div class="col-md-4 hs-col"><div class="hs"><strong>15+</strong><span>years partnering with global businesses</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div id="services">
+
+<!-- TALENT SERVICES -->
+<section class="practice light" id="talent">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="p-intro">
+          <span class="p-chip">3 service areas</span>
+          <h2>Talent services</h2>
+          <p>Find, staff and scale the people your business runs on, from a single executive search to a complete offshore center.</p>
+          <a class="btn btn-deep" href="#contact" data-service="Recruitment services">Talk to a recruiter</a>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="svc-list" id="acc-talent">
+
+          <div class="svc" id="recruitment">
+            <button class="svc-btn" type="button" data-toggle="collapse" data-target="#p-recruitment" aria-expanded="true" aria-controls="p-recruitment">
+              <span class="s-t"><b>Recruitment services</b><small>End-to-end hiring for the roles that are hardest to fill and hardest to get wrong.</small></span><span class="s-n">4 services</span><i class="pm" aria-hidden="true"></i>
+            </button>
+            <div id="p-recruitment" class="collapse show" data-parent="#acc-talent">
+              <div class="panel-body">
+                <ul class="sublist row no-gutters">
+                  <li class="col-md-6 pr-md-4"><b><a href="https://cftconsulting.us/talent-acquisition/">Talent acquisition</a></b><span>Targeted sourcing and vetting for the right skills and culture fit.</span></li>
+                  <li class="col-md-6 pl-md-4"><b><a href="https://cftconsulting.us/executive-search/">Executive search</a></b><span>Confidential, senior-level searches for leadership roles.</span></li>
+                  <li class="col-md-6 pr-md-4"><b><a href="https://cftconsulting.us/permanent-talent/">Permanent talent</a></b><span>Long-term hires matched to your team and goals.</span></li>
+                  <li class="col-md-6 pl-md-4"><b><a href="https://cftconsulting.us/requirement-process-outsourcing/">Recruitment process outsourcing</a></b><span>Hand us part or all of your hiring process.</span></li>
+                </ul>
+                <div class="foot"><a class="btn btn-deep" href="https://cftconsulting.us/recruitment-services/">View recruitment services</a><a class="alt" href="#contact" data-service="Recruitment services">Discuss a role</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="svc" id="staffing">
+            <button class="svc-btn" type="button" data-toggle="collapse" data-target="#p-staffing" aria-expanded="false" aria-controls="p-staffing">
+              <span class="s-t"><b>Staffing solutions</b><small>Flexible IT and non-IT staffing models that scale up or down with your real workload.</small></span><span class="s-n">5 services</span><i class="pm" aria-hidden="true"></i>
+            </button>
+            <div id="p-staffing" class="collapse" data-parent="#acc-talent">
+              <div class="panel-body">
+                <ul class="sublist row no-gutters">
+                  <li class="col-md-6 pr-md-4"><b><a href="https://cftconsulting.us/staff-augmentation/">Staff augmentation</a></b><span>Add skilled professionals for as long as a project needs them.</span></li>
+                  <li class="col-md-6 pl-md-4"><b><a href="https://cftconsulting.us/flexible-staffing/">Flexible staffing</a></b><span>Temporary and project-based talent that adapts to shifting demand.</span></li>
+                  <li class="col-md-6 pr-md-4"><b><a href="https://cftconsulting.us/contract-to-hire/">Contract-to-hire</a></b><span>Work with a candidate first, then convert to permanent when you are sure.</span></li>
+                  <li class="col-md-6 pl-md-4"><b><a href="https://cftconsulting.us/hire-deploy-train/">Hire, deploy &amp; train</a></b><span>We hire, train and deploy people so they arrive ready to contribute.</span></li>
+                  <li class="col-md-6 pr-md-4"><b><a href="https://cftconsulting.us/sourcing-recruitment/">Sourcing &amp; recruitment</a></b><span>Sourcing and screening for high-volume or hard-to-find profiles.</span></li>
+                </ul>
+                <div class="foot"><a class="btn btn-deep" href="https://cftconsulting.us/it-staffing-services">View staffing solutions</a><a class="alt" href="#contact" data-service="Staffing solutions">Discuss a staffing need</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="svc" id="gcc">
+            <button class="svc-btn" type="button" data-toggle="collapse" data-target="#p-gcc" aria-expanded="false" aria-controls="p-gcc">
+              <span class="s-t"><b>Global capability centers</b><small>Plan, launch and run offshore capability centers, from first strategy session to full handover.</small></span><span class="s-n">3 services</span><i class="pm" aria-hidden="true"></i>
+            </button>
+            <div id="p-gcc" class="collapse" data-parent="#acc-talent">
+              <div class="panel-body">
+                <ul class="sublist row no-gutters">
+                  <li class="col-md-6 pr-md-4"><b>Plan</b><span>Location, cost and talent-market assessment to build the case.</span></li>
+                  <li class="col-md-6 pl-md-4"><b>Launch</b><span>Setup, hiring and onboarding of the team that will run the center.</span></li>
+                  <li class="col-md-6 pr-md-4"><b>Run and hand over</b><span>Operational support until the center can stand on its own.</span></li>
+                </ul>
+                <div class="foot"><a class="btn btn-deep" href="https://cftconsulting.us/global-capability-centers/">View GCC services</a><a class="alt" href="#contact" data-service="Global capability centers">Talk to a GCC expert</a></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SALES SOLUTIONS -->
+<section class="practice dark" id="growth">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="p-intro">
+          <span class="p-chip">26 services in 4 areas</span>
+          <h2>Sales solutions</h2>
+          <p>Once the team is in place, keep it busy. Lead generation, data, marketing and sales enablement run as one connected team instead of four separate vendors.</p>
+          <a class="btn btn-brand" href="#contact" data-service="Sales solutions">Plan a campaign</a>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="svc-list" id="acc-growth">
+
+          <div class="svc" id="lead-demand">
+            <button class="svc-btn" type="button" data-toggle="collapse" data-target="#p-lead-demand" aria-expanded="true" aria-controls="p-lead-demand">
+              <span class="s-t"><b>Lead &amp; Demand Generation</b><small class="small2">Fill the top of funnel with prospects who match your ICP, then move them toward a sales conversation.</small></span><span class="s-n">8 services</span><i class="pm" aria-hidden="true"></i>
+            </button>
+            <div id="p-lead-demand" class="collapse show" data-parent="#acc-growth">
+              <div class="panel-body">
+                <ul class="sublist row no-gutters">
+                  <li class="col-md-6 pr-md-4"><b>Multi-Channel Lead Generation</b><span>Email, phone, and social outreach run together to reach the accounts that fit your profile.</span></li>
+                  <li class="col-md-6 pl-md-4"><b>Marketing Qualified Leads (MQLs)</b><span>Leads scored and filtered against your criteria before they reach your sales team.</span></li>
+                  <li class="col-md-6 pr-md-4"><b>HQL, BANT &amp; CCL Leads</b><span>Budget-, authority-, need-, and timeline-qualified leads, verified before handoff.</span></li>
+                  <li class="col-md-6 pl-md-4"><b>Account-Based Marketing (ABM)</b><span>Coordinated, personalized campaigns aimed at your named target accounts.</span></li>
+                  <li class="col-md-6 pr-md-4"><b>Appointment Setting</b><span>Qualified meetings booked directly onto your sales team's calendar with the right decision-makers.</span></li>
+                  <li class="col-md-6 pl-md-4"><b>Custom &amp; Global Campaigns</b><span>Sequences built around your offer and market, including multilingual outreach for international targets.</span></li>
+                  <li class="col-md-6 pr-md-4"><b>Lead Nurturing</b><span>Ongoing follow-up that keeps early-stage leads warm until they're ready to buy.</span></li>
+                  <li class="col-md-6 pl-md-4"><b>Lead Verification</b><span>Checks that confirm a lead is genuine and accurately matched before it reaches you.</span></li>
+                </ul>
+                <div class="foot"><a class="btn btn-brand" href="https://cftconsulting.us/sales-solutions/#pillar-1">View lead &amp; demand generation</a><a class="alt" href="#contact" data-service="Lead &amp; Demand Generation">Discuss lead generation</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="svc" id="database-intelligence">
+            <button class="svc-btn" type="button" data-toggle="collapse" data-target="#p-database-intelligence" aria-expanded="false" aria-controls="p-database-intelligence">
+              <span class="s-t"><b>Database &amp; Prospect Intelligence</b><small class="small2">Every campaign runs on accurate data. This is where it comes from and how it stays current.</small></span><span class="s-n">6 services</span><i class="pm" aria-hidden="true"></i>
+            </button>
+            <div id="p-database-intelligence" class="collapse" data-parent="#acc-growth">
+              <div class="panel-body">
+                <ul class="sublist row no-gutters">
+                  <li class="col-md-6 pr-md-4"><b>Contact Discovery</b><span>Research-based sourcing of the specific decision-makers you need to reach.</span></li>
+                  <li class="col-md-6 pl-md-4"><b>List Building</b><span>Custom prospect lists built to your firmographic and technographic filters.</span></li>
+                  <li class="col-md-6 pr-md-4"><b>Data Appending &amp; Enrichment</b><span>Fill gaps in existing records, such as direct dials, titles and emails, without starting over.</span></li>
+                  <li class="col-md-6 pl-md-4"><b>Look-Alike Lists</b><span>New prospect lists modeled on the traits of your best current customers.</span></li>
+                  <li class="col-md-6 pr-md-4"><b>CRM &amp; List Hygiene</b><span>De-duplication and data cleaning that keeps your CRM accurate, organized, and decision-ready.</span></li>
+                  <li class="col-md-6 pl-md-4"><b>Buyer Intent &amp; Market Intelligence</b><span>Signals on who's actively researching solutions like yours, plus segment and competitive research.</span></li>
+                </ul>
+                <div class="foot"><a class="btn btn-brand" href="https://cftconsulting.us/sales-solutions/#pillar-2">View database &amp; intelligence</a><a class="alt" href="#contact" data-service="Database &amp; Prospect Intelligence">Discuss data needs</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="svc" id="marketing-content">
+            <button class="svc-btn" type="button" data-toggle="collapse" data-target="#p-marketing-content" aria-expanded="false" aria-controls="p-marketing-content">
+              <span class="s-t"><b>Marketing &amp; Content Services</b><small class="small2">The channels that carry your message and keep prospects engaged between touches.</small></span><span class="s-n">6 services</span><i class="pm" aria-hidden="true"></i>
+            </button>
+            <div id="p-marketing-content" class="collapse" data-parent="#acc-growth">
+              <div class="panel-body">
+                <ul class="sublist row no-gutters">
+                  <li class="col-md-6 pr-md-4"><b>Email Marketing</b><span>Campaign design, sequencing, and deliverability management for consistent audience engagement.</span></li>
+                  <li class="col-md-6 pl-md-4"><b>Telemarketing &amp; Telecalling</b><span>Outbound calling for qualification, follow-up, and appointment confirmation.</span></li>
+                  <li class="col-md-6 pr-md-4"><b>Social Media Marketing</b><span>LinkedIn and social channels used for prospecting and brand visibility.</span></li>
+                  <li class="col-md-6 pl-md-4"><b>Content Syndication</b><span>Distributing your content through third-party channels to capture funnel-stage leads.</span></li>
+                  <li class="col-md-6 pr-md-4"><b>Event &amp; Webinar Registrations</b><span>Driving qualified attendance to your webinars, demos, and field events.</span></li>
+                  <li class="col-md-6 pl-md-4"><b>SEO, Paid Search &amp; Display Ads</b><span>Search visibility, Google Ads management, and targeted display campaigns to capture inbound demand.</span></li>
+                </ul>
+                <div class="foot"><a class="btn btn-brand" href="https://cftconsulting.us/sales-solutions/#pillar-3">View marketing &amp; content</a><a class="alt" href="#contact" data-service="Marketing &amp; Content Services">Discuss marketing</a></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /#services -->
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="sec-head">
+      <h2>How an engagement works</h2>
+      <p>The same four steps apply whether you are hiring a team or building a pipeline.</p>
+    </div>
+    <ol class="steps row">
+      <li class="col-sm-6 col-md-3"><span class="n">1</span><h3>Understand</h3><p>We start with the role, team or growth target, and what success looks like for your business.</p></li>
+      <li class="col-sm-6 col-md-3"><span class="n">2</span><h3>Source and shortlist</h3><p>We build a focused shortlist of candidates or target accounts matched to your brief.</p></li>
+      <li class="col-sm-6 col-md-3"><span class="n">3</span><h3>Deliver and onboard</h3><p>Placements start, campaigns launch, and we stay close through the first weeks.</p></li>
+      <li class="col-sm-6 col-md-3"><span class="n">4</span><h3>Review and refine</h3><p>We check results against your goals and adjust the plan as your needs change.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- WHY CFT -->
+<section class="why">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 intro-col">
+        <h2>Why clients choose CFT</h2>
+        <p class="intro">A focused way of working that keeps hiring fast without making it generic.</p>
+      </div>
+      <div class="col-lg-7">
+        <div class="row">
+          <div class="col-sm-6 reason-col"><div class="reason"><h3>Hire right, first time</h3><p>A rigorous vetting process and a deep talent network find people with the right skills and culture fit, fast.</p></div></div>
+          <div class="col-sm-6 reason-col"><div class="reason"><h3>Vertical focus</h3><p>Deep experience in niche functional areas across R&amp;D, manufacturing, compliance and commercialization.</p></div></div>
+          <div class="col-sm-6 reason-col"><div class="reason"><h3>Speed, guaranteed</h3><p>Each consultant limits their open roles, so every search gets real attention.</p></div></div>
+          <div class="col-sm-6 reason-col"><div class="reason"><h3>Personalized service</h3><p>Recruiters stay focused on one vertical, which keeps a strong pipeline ready for each role.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 intro-col">
+        <h2>Start a conversation</h2>
+        <p class="intro">Tell us what you need and we will get back to you.</p>
+        <p class="intro"><a class="mail" href="mailto:contact@cftconsulting.us">contact@cftconsulting.us</a></p>
+      </div>
+      <div class="col-lg-7">
+        <form id="form">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="name">Name</label>
+              <input class="form-control" type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="email">Email</label>
+              <input class="form-control" type="email" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Service</label>
+            <select class="form-control" id="service" name="service">
+              <option>General enquiry</option>
+              <option>Recruitment services</option>
+              <option>Staffing solutions</option>
+              <option>Global capability centers</option>
+              <option>Sales solutions</option>
+              <option>Lead &amp; Demand Generation</option>
+              <option>Database &amp; Prospect Intelligence</option>
+              <option>Marketing &amp; Content Services</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn-brand" type="submit">Send message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- jQuery + Bootstrap 4 JS (needed for the accordions) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+
+<script>
+(function(){
+  var select=document.getElementById('service');
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-service]');
+    if(a && select){
+      var v=a.getAttribute('data-service');
+      for(var i=0;i<select.options.length;i++){
+        if(select.options[i].text===v){select.selectedIndex=i;break;}
+      }
+    }
+  });
+  var form=document.getElementById('form');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var f=e.target.elements;
+      var body='Name: '+f.name.value+'\nEmail: '+f.email.value+'\nService: '+f.service.value+'\n\n'+f.message.value;
+      window.location.href='mailto:contact@cftconsulting.us?subject='+encodeURIComponent('Enquiry: '+f.service.value)+'&body='+encodeURIComponent(body);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
